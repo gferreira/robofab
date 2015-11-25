@@ -23,43 +23,43 @@ Pen()
 
 The normal Pen object and pen that descend from it can be passed to ``aGlyph.draw(aPen)``. The Glyph calls these methods of the pen object to draw. It's very similar to "Drawing like PostScript".
 
-.. py:function:: moveTo(pt, smooth=False)
+.. function:: moveTo(pt, smooth=False)
 
 Move the pen to the ``(x, y)`` in ``pt``.
 
-.. py:function:: lineTo(pt, smooth=False)
+.. function:: lineTo(pt, smooth=False)
 
 Draw a straight line to the ``(x, y)`` coordinate in ``pt``.
 
-.. py:function:: curveTo(pt1, pt2, pt3, smooth=False)
+.. function:: curveTo(pt1, pt2, pt3, smooth=False)
 
 Draw a classic Cubic Bezier ("PostScript") curve through ``pt1`` (offcurve), ``pt2`` (also offcurve) and ``pt3`` which is oncurve again.
 
-.. py:function:: qCurveTo(*pts, **kwargs)
+.. function:: qCurveTo(*pts, **kwargs)
 
 Draw a Quadratic ("TrueType") curve through, well, any number of offcurve points. This is not the place to discuss Quadratic esoterics, but at least: this pen can deal with them and draw them.
 
-.. py:function:: closePath
+.. function:: closePath
 
 Tell the pen the path is finished.
 
-.. py:function:: addComponent(baseName, offset=(0, 0), scale=(1, 1))
+.. function:: addComponent(baseName, offset=(0, 0), scale=(1, 1))
 
 Tell the pen to add a component of ``baseName``, at ``offset`` and with ``scale``.
 
-.. py:function:: addAnchor(name, (x, y))
+.. function:: addAnchor(name, (x, y))
 
 Tell the pen to add an Anchor point with a name and a position.
 
-.. py:function:: setWidth(width)
+.. function:: setWidth(width)
 
 Tell the pen to set the width of the glyph. (deprecated)
 
-.. py:function:: setNote(note)
+.. function:: setNote(note)
 
 Tell the pen to add a note to the glyph. (deprecated)
 
-.. py:function:: doneDrawing
+.. function:: doneDrawing
 
 Tell the pen the drawing is done.
 
@@ -68,19 +68,19 @@ PointsPen()
 
 Where the normal pen is an easy tool to think about drawing, the ``PointsPen`` is geared towards accessing all the data in the contours of the glyph. A ``PointsPen`` has a very simple interface, it just steps through all the points in a Glyph. Too complicated if you just want your script to draw in a glyph somewhere, but very useful for conversions of one thing to another, and when you're dealing with more elaborate point structures like several consecutive offcurve points. Again, have a look in the robofab/pens to see the available pens. Also the `LettError wiki <#>`_ has an in-depth description of the pen protocols. The ``PointsPen`` is passed to the ``aGlyph.drawPoints(aPointsPen)``
 
-.. py:function:: beginPath
+.. function:: beginPath
 
 Start a new sub path.
 
-.. py:function:: endPath
+.. function:: endPath
 
 End the current sub path.
 
-.. py:function:: addPoint(pt, segmentType=None, smooth=False, name=None, **kwargs)
+.. function:: addPoint(pt, segmentType=None, smooth=False, name=None, **kwargs)
 
 Add a point to the current sub path.
 
-.. py:function:: addComponent(self, baseGlyphName, transformation)
+.. function:: addComponent(self, baseGlyphName, transformation)
 
 Add a sub glyph.
 

@@ -21,25 +21,25 @@ A component can be a part of a glyph and it is a reference to another glyph in t
 Attributes
 ----------
 
-.. py:attribute:: baseGlyph
+.. attribute:: baseGlyph
 
 The name of the glyph the component points to. The glyph is assumed to be present in the same font.
 
 .. note:: In FontLab this attribute is read-only.
 
-.. py:attribute:: index
+.. attribute:: index
 
 The index of the component in the list of components in the parent glyph. i.e. the first component in a glyph has index ``0``.
 
-.. py:attribute:: offset
+.. attribute:: offset
 
 The offset vector ``(x, y)``. The distance the component has been moved.
 
-.. py:attribute:: scale
+.. attribute:: scale
 
 The scale ``(x, y)``. The distance the component has been moved.
 
-.. py:attribute:: box
+.. attribute:: box
 
 The bounding box for the component. (read only)
 
@@ -56,29 +56,29 @@ Attribute examples
 Methods
 -------
 
-.. py:function:: decompose
+.. function:: decompose
 
 In the parent glyph replace this component object with the actual contours. This practically ends the existence of the component object.
 
-.. py:function:: move((x, y))
+.. function:: move((x, y))
 
 Move the component to position ``(x, y)``.
 
-.. py:function:: draw(aPen)
+.. function:: draw(aPen)
 
 Draw this component with ``aPen``.
 
-.. py:function:: drawPoints(aPointPen)
+.. function:: drawPoints(aPointPen)
 
 Draw this component with ``aPointPen``.
 
 .. note:: Both these drawing methods are usually called by ``aGlyph.draw()`` and ``aGlyph.drawPoints()`` as part of the drawing process.
 
-.. py:function:: copy
+.. function:: copy
 
 Return a deep copy of the object.
 
-.. py:function:: setChanged
+.. function:: setChanged
 
 Call to indicate that something about the component has changed.
 

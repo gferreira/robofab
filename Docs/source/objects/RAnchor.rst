@@ -21,23 +21,23 @@ Anchors are single points in a glyph which are not part of a contour. Anchors ha
 Attributes
 ----------
 
-.. py:attribute:: index
+.. attribute:: index
 
 The index of the anchor. (read only)
 
-.. py:attribute:: position
+.. attribute:: position
 
 The position of the anchor ``(x, y)``.
 
-.. py:attribute:: x
+.. attribute:: x
 
 The ``x`` position of the anchor.
 
-.. py:attribute:: y
+.. attribute:: y
 
 The ``y`` position of the anchor.
 
-.. py:attribute:: name
+.. attribute:: name
 
 The name of the anchor.
 
@@ -49,31 +49,31 @@ Attribute examples
 Methods
 -------
 
-.. py:function:: copy()
+.. function:: copy()
 
 Return a deepcopy of the object.
 
-.. py:function:: move((x, y))
+.. function:: move((x, y))
 
 Move the anchor of the ``bPoint`` to ``(x,y)``. The relative coordinates of the ``bcpIn`` and ``bcpOut`` will remain the same, which means that in fact, they move the same distance.
 
-.. py:function:: scale((x, y), center=(0, 0))
+.. function:: scale((x, y), center=(0, 0))
 
 Scale the anchor.
 
-.. py:function:: round()
+.. function:: round()
 
 Round the coordinates to whole integers.
 
-.. py:function:: draw(aPen)
+.. function:: draw(aPen)
 
 Draw the object with a RoboFab segment pen.
 
-.. py:function:: drawPoints(aPen)
+.. function:: drawPoints(aPen)
 
 Draw the object with a point pen. See :doc:`how to use pens <../howtos/use_pens>`.
 
-.. py:function:: transform(matrix)
+.. function:: transform(matrix)
 
 Transform this point. Use a Transform matrix object to mess with the point. See :doc:`how to use transformations <../howtos/use_transformations>`.
 

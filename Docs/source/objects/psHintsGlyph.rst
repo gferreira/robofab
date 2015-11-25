@@ -21,22 +21,22 @@ The ``PostScriptGlyphHintValues`` objects, in FontLab and NoneLab flavor, can re
 Attributes
 ^^^^^^^^^^
 
-.. py:attribute:: hHints
+.. attribute:: hHints
 
 List of (position, width) tuples for horizontal.
 
-.. py:attribute:: vHints
+.. attribute:: vHints
 
 List of (position, width) tuples.
 
 Methods
 ^^^^^^^
 
-.. py:function:: copy()
+.. function:: copy()
 
 Returns a copy of the object. Both in FontLab and NoneLab the copy will be an ``objectsRF.PostScriptFontHintValues``.
 
-.. py:function:: round()
+.. function:: round()
 
 Round the values to ints as much as the nature of the values allows.
 
@@ -48,14 +48,14 @@ Round the values to ints as much as the nature of the values allows.
     - ``stems`` are rounded to integers.
     - ``blues`` are rounded to integers.
 
-.. py:function:: asDict()
+.. function:: asDict()
 
 Returns a dictionary with all attributes and values of this object.
 
-.. py:function:: fromDict(aDict)
+.. function:: fromDict(aDict)
 
 Rhis will look for familiar attributes in ``aDict`` and assign the value to the object.
 
-.. py:function:: update(anotherPSHintsObject)
+.. function:: update(anotherPSHintsObject)
 
 This will copy values from the other object.

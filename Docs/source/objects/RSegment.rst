@@ -10,11 +10,11 @@ Usage
 
 .. code::
 
-    < RSegment for RoboFab Demo Font.R[0][0] >
-    < RSegment for RoboFab Demo Font.R[0][1] >
-    < RSegment for RoboFab Demo Font.R[0][2] >
-    < RSegment for RoboFab Demo Font.R[0][3] >
-    < RSegment for RoboFab Demo Font.R[0][4] >
+    <RSegment for RoboFab Demo Font.R[0][0]>
+    <RSegment for RoboFab Demo Font.R[0][1]>
+    <RSegment for RoboFab Demo Font.R[0][2]>
+    <RSegment for RoboFab Demo Font.R[0][3]>
+    <RSegment for RoboFab Demo Font.R[0][4]>
 
 Description
 -----------
@@ -29,27 +29,27 @@ The way outline data is organised in RoboFab, and how the various objects relate
 Attributes
 ----------
 
-.. py:attribute:: type
+.. attribute:: type
 
 Type of segment.
 
-.. py:attribute:: smooth
+.. attribute:: smooth
 
 ``True`` if the segment is ``smooth``, ``False`` if not.
 
-.. py:attribute:: selected
+.. attribute:: selected
 
 Returns ``True`` if the segment is selected, ``False`` if not.
 
-.. py:attribute:: points
+.. attribute:: points
 
 List of points in the segment.
 
-.. py:attribute:: onCurve
+.. attribute:: onCurve
 
 Returns the oncurve point associated with the segment.
 
-.. py:attribute:: offCurve
+.. attribute:: offCurve
 
 Returns a list of offcurve points associated with the segment.
 
@@ -61,19 +61,19 @@ Attribute examples
 Methods
 -------
 
-.. py:function:: copy
+.. function:: copy
 
 Return a deepcopy of the object.
 
-.. py:function:: move((x, y))
+.. function:: move((x, y))
 
 Move the anchor of the ``bPoint`` to ``(x,y)``. The relative coordinates of the ``bcpIn`` and ``bcpOut`` will remain the same, which means that in fact, they move the same distance.
 
-.. py:function:: round
+.. function:: round
 
 Round the coordinates to whole integers.
 
-.. py:function:: transform(matrix)
+.. function:: transform(matrix)
 
 Transform this point. Use a Transform matrix object to mess with the point.
 

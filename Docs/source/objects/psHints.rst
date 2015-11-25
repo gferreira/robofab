@@ -11,43 +11,43 @@ A bug in FontLab's own Python attributes relating to blues, ``otherBlues``, ``fa
 The font.info attributes (since RoboFab 1.2)
 --------------------------------------------
 
-.. py:attribute:: font.info.postscriptBlueValues
+.. attribute:: font.info.postscriptBlueValues
 
 (number list) A list of up to 14 integers or floats specifying the values that should be in the Type 1/CFF ``BlueValues`` field. This list must contain an even number of integers following the rules defined in the Type 1/CFF specification.
 
-.. py:attribute:: font.info.postscriptOtherBlues
+.. attribute:: font.info.postscriptOtherBlues
 
 (number list) A list of up to 10 integers or floats specifying the values that should be in the Type 1/CFF ``OtherBlues`` field. This list must contain an even number of integers following the rules defined in the Type 1/CFF specification.
 
-.. py:attribute:: font.info.postscriptFamilyBlues
+.. attribute:: font.info.postscriptFamilyBlues
 
 (number list) A list of up to 14 integers or floats specifying the values that should be in the Type 1/CFF ``FamilyBlues`` field. This list must contain an even number of integers following the rules defined in the Type 1/CFF specification.
 
-.. py:attribute:: font.info.postscriptFamilyOtherBlues
+.. attribute:: font.info.postscriptFamilyOtherBlues
 
 (number list) A list of up to 10 integers or floats specifying the values that should be in the Type 1/CFF ``FamilyOtherBlues`` field. This list must contain an even number of integers following the rules defined in the Type 1/CFF specification.
 
-.. py:attribute:: font.info.postscriptStemSnapH
+.. attribute:: font.info.postscriptStemSnapH
 
 (number list) List of horizontal stems sorted in increasing order. Up to 12 integers or floats are possible. This corresponds to the Type 1/CFF ``StemSnapH`` field.
 
-.. py:attribute:: font.info.postscriptStemSnapV
+.. attribute:: font.info.postscriptStemSnapV
 
 (number list) List of vertical stems sorted in increasing order. Up to 12 integers or floats are possible. This corresponds to the Type 1/CFF ``StemSnapV`` field.
 
-.. py:attribute:: font.info.postscriptBlueFuzz
+.. attribute:: font.info.postscriptBlueFuzz
 
 (integer or float) BlueFuzz value. This corresponds to the Type 1/CFF ``BlueFuzz`` field.
 
-.. py:attribute:: font.info.postscriptBlueShift
+.. attribute:: font.info.postscriptBlueShift
 
 (integer or float) BlueShift value. This corresponds to the Type 1/CFF ``BlueShift`` field.
 
-.. py:attribute:: font.info.postscriptBlueScale
+.. attribute:: font.info.postscriptBlueScale
 
 (float) BlueScale value. This corresponds to the Type 1/CFF ``BlueScale`` field.
 
-.. py:attribute:: font.info.postscriptForceBold
+.. attribute:: font.info.postscriptForceBold
 
 (boolean) Indicates how the Type 1/CFF ``ForceBold`` field should be set.
 
@@ -93,66 +93,66 @@ Example, the font.psHints object, usage
 Attributes
 ----------
 
-.. py:attribute:: blueShift
+.. attribute:: blueShift
 
 Value for blue shift. Integer in FontLab, float or int in NoneLab.
 
-.. py:attribute:: blueScale
+.. attribute:: blueScale
 
 Value for blue scale. Float in FontLab and NoneLab.
 
-.. py:attribute:: blueFuzz
+.. attribute:: blueFuzz
 
 Value for blue fuzz. Integer in FontLab, float or int in NoneLab.
 
-.. py:attribute:: forceBold
+.. attribute:: forceBold
 
 Value for force bold. Boolean in FontLab and NoneLab.
 
-.. py:attribute:: blueValues
+.. attribute:: blueValues
 
 List of pairs of numbers indicating the primary alignment zones. Integers in FontLab, floats or ints in NoneLab.
 
-.. py:attribute:: otherBlues
+.. attribute:: otherBlues
 
 List of pairs of numbers indicating the secondary alignment zones. Integers in FontLab, floats or ints in NoneLab.
 
-.. py:attribute:: familyBlues
+.. attribute:: familyBlues
 
 List of pairs of numbers indicating the primary family alignment zones. Integers in FontLab, floats or ints in NoneLab.
 
-.. py:attribute:: familyOtherBlues
+.. attribute:: familyOtherBlues
 
 List of pairs of numbers indicating the secondary family alignment zones. Integers in FontLab, floats or ints in NoneLab.
 
-.. py:attribute:: vStems
+.. attribute:: vStems
 
 List of numbers for the vertical stems. Integers in FontLab, floats or ints in NoneLab.
 
-.. py:attribute:: hStems
+.. attribute:: hStems
 
 List of numbers for the horizontal stems. Integers in FontLab, floats or ints in NoneLab.
 
 Methods
 -------
 
-.. py:function:: copy
+.. function:: copy
 
 Returns a copy of the object. Both in FontLab and NoneLab the copy will be an ``objectsRF.PostScriptFontHintValues``.
 
-.. py:function:: round
+.. function:: round
 
 Round the values to ints as much as the nature of the values allows. Note: ``blueScale`` is not rounded, it is a ``float``, ``forceBold`` is set to ``False`` if ``-0.5 < value < 0.5``. Otherwise it will be ``True``, ``blueShift``, ``blueFuzz`` are rounded to ``int``, stems are rounded to ``int``, blues are rounded to ``int``.
 
-.. py:function:: asDict
+.. function:: asDict
 
 Returns a dictionary with all attributes and values of this object.
 
-.. py:function:: fromDict(aDict)
+.. function:: fromDict(aDict)
 
 This will look for familiar attributes in ``aDict`` and assign the value to the object.
 
-.. py:function:: update(anotherPSHintsObject)
+.. function:: update(anotherPSHintsObject)
 
 This will copy values from the other object.
 

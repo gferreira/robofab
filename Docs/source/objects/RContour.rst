@@ -27,27 +27,27 @@ The way outline data is organised in RoboFab, and how the various objects relate
 Attributes
 ----------
 
-.. py:attribute:: index
+.. attribute:: index
 
 The index of the contour in the Glyph.
 
-.. py:attribute:: selected
+.. attribute:: selected
 
 Returns ``1`` if the contour is selected, ``0`` if it isn't.
 
-.. py:attribute:: box
+.. attribute:: box
 
 The bounding box for the contour. (read only)
 
-.. py:attribute:: clockwise
+.. attribute:: clockwise
 
 Direction of contour: ``1=clockwise``, ``0=counterclockwise``.
 
-.. py:attribute:: points
+.. attribute:: points
 
 The contour as a list of :doc:`Point <RPoint>`\'s.
 
-.. py:attribute:: bPoints
+.. attribute:: bPoints
 
 The contour as a list of :doc:`bPoint <bPoint>`\'s.
 
@@ -61,81 +61,81 @@ Methods for segments
 
 For regular drawing in glyphs: please use :doc:`Pens <../howtos/use_pens>`. If you want to mess with segments on a lower level, be our guest:
 
-.. py:function:: appendSegment(segmentType, points, smooth=False)
+.. function:: appendSegment(segmentType, points, smooth=False)
 
 Add a segment to the contour. Parameters?
 
-.. py:function:: insertSegment(index, segmentType, points, smooth=False):
+.. function:: insertSegment(index, segmentType, points, smooth=False):
 
 Insert a segment into the contour.
 
-.. py:function:: removeSegment(index):
+.. function:: removeSegment(index):
 
 Remove a segment from the contour.
 
-.. py:function:: setStartSegment(segmentIndex):
+.. function:: setStartSegment(segmentIndex):
 
 Set the first node on the contour.
 
 Methods for points
 ------------------
 
-.. py:function:: appendBPoint(pointType, anchor, bcpIn=(0, 0), bcpOut=(0, 0))
+.. function:: appendBPoint(pointType, anchor, bcpIn=(0, 0), bcpOut=(0, 0))
 
 Append a ``bPoint`` to the contour.
 
-.. py:function:: autoStartSegment
+.. function:: autoStartSegment
 
 Automatically set the lower left point of the contour as the first point.
 
-.. py:function:: insertBPoint(index, pointType, anchor, bcpIn=(0, 0), bcpOut=(0, 0))
+.. function:: insertBPoint(index, pointType, anchor, bcpIn=(0, 0), bcpOut=(0, 0))
 
 Insert a ``bPoint`` at index on the contour.
 
 Other methods
 -------------
 
-.. py:function:: reverseContour()
+.. function:: reverseContour()
 
 Reverse contour direction.
 
-.. py:function:: copy
+.. function:: copy
 
 Duplicate this contour.
 
-.. py:function:: draw(aPen)
+.. function:: draw(aPen)
 
 Draw the object with a RoboFab segment pen.
 
-.. py:function:: drawPoints(aPen)
+.. function:: drawPoints(aPen)
 
 Draw the object with a point pen.
 
-.. py:function:: move((x, y))
+.. function:: move((x, y))
 
 Move the contour.
 
-.. py:function:: pointInside((x, y), evenOdd=0)
+.. function:: pointInside((x, y), evenOdd=0)
 
 Determine if the point is inside or ouside of the contour.
 
-.. py:function:: round()
+.. function:: round()
 
 Round the value of all points in the contour.
 
-.. py:function:: scale((x, y), center=(0, 0))
+.. function:: scale((x, y), center=(0, 0))
 
 Scale the contour by ``x`` and ``y``. Optionally set the center of the scale.
 
-.. py:function:: rotate(angle, offset=None)
+.. function:: rotate(angle, offset=None)
 
 Rotate the contour by ``angle`` (in degrees). Optionally set an ``offset`` value.
 
-.. py:function:: skew(angle, offset=None)
+.. function:: skew(angle, offset=None)
 
 Skew the contour by ``angle`` (in degrees). Optionally set an ``offset`` value.
 
-.. py:function:: transform(matrix)
+.. function:: transform(matrix)
 
 Transform this contour. Use a Transform matrix object to mess with the contour. See also :doc:`how to use transformations <../howtos/use_transformations>`.
 

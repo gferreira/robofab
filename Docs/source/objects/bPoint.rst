@@ -25,19 +25,19 @@ The way outline data is organised in RoboFab, and how the various objects relate
 Attributes
 ----------
 
-.. py:attribute:: anchor
+.. attribute:: anchor
 
 The ``(x, y)`` position of (oncurve) anchor.
 
-.. py:attribute:: bcpIn
+.. attribute:: bcpIn
 
 The ``(x, y)`` position of the incoming (offcurve) bezier control point.
 
-.. py:attribute:: bcpOut
+.. attribute:: bcpOut
 
 The ``(x, y)`` position of the outgoing (offcurve) bezier control point.
 
-.. py:attribute:: type
+.. attribute:: type
 
 The type of the ``bPoint``. Either ``corner`` or ``curve``.
 
@@ -55,23 +55,23 @@ Attribute examples
 Methods
 -------
 
-.. py:function:: copy
+.. function:: copy
 
 Return a deepcopy of the object.
 
-.. py:function:: move((x, y))
+.. function:: move((x, y))
 
 Move the anchor of the ``bPoint`` to ``(x,y)``. The relative coordinates of the ``bcpIn`` and ``bcpOut`` will remain the same, which means that in fact, they move the same distance.
 
-.. py:function:: round
+.. function:: round
 
 Round the coordinates to whole integers.
 
-.. py:function:: select(state=True)
+.. function:: select(state=True)
 
 Select this point.
 
-.. py:function:: transform(matrix)
+.. function:: transform(matrix)
 
 Transform this point. Use a Transform matrix object to mess with the point.
 

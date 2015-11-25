@@ -33,6 +33,6 @@ In RoboFab 1.0 and FontLab 4.6.1, the lib is saved inside the (FontLab native at
 Methods
 -------
 
-.. py:function:: keys()
+.. function:: keys()
 
 Return a list of the keys. Normal dictionary stuff.

@@ -25,49 +25,49 @@ The way outline data is organised in RoboFab, and how the various objects relate
 Attributes
 ----------
 
-.. py:attribute:: x
+.. attribute:: x
 
 The ``x`` coordinate of this point.
 
-.. py:attribute:: y
+.. attribute:: y
 
 The ``y`` coordinate of this point.
 
-.. py:attribute:: type
+.. attribute:: type
 
 The ``type`` of this point.
 
-.. py:attribute:: selected
+.. attribute:: selected
 
 Boolean for selection state, i.e. ``True`` or ``False``.
 
 UFO only attributes
 -------------------
 
-.. py:attribute:: name
+.. attribute:: name
 
 The name of the point (UFO only).
 
 Methods
 -------
 
-.. py:function:: copy()
+.. function:: copy()
 
 Return a deepcopy of the object.
 
-.. py:function:: move((x, y))
+.. function:: move((x, y))
 
 Move the anchor of the ``bPoint`` to ``(x,y)``. The relative coordinates of the ``bcpIn`` and ``bcpOut`` will remain the same, which means that in fact, they move the same distance.
 
-.. py:function:: round()
+.. function:: round()
 
 Round the coordinates to whole integers.
 
-.. py:function:: select(state=True)
+.. function:: select(state=True)
 
 Select this point.
 
-.. py:function:: transform(matrix)
+.. function:: transform(matrix)
 
 Transform this point. Use a Transform matrix object to mess with the point.
 
